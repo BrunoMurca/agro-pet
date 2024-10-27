@@ -1,0 +1,384 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #671f97;
+}
+
+.logo {
+    margin-left: 80px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+    text-align: center;
+}
+
+.menu li img {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    margin-right: 3px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.menu img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    margin-bottom: 5px;
+}
+
+.menu a:hover img {
+    transform: scale(1.1);
+}
+
+.menu a:hover {
+    color: #ff6347;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 30px;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Estilo das especialidades */
+ .conteudo {
+    height: auto;
+    margin-top: 70px;
+    padding:  4px 4%;
+}  
+.conteudo .interface h2{
+   font-size: 22px;
+   margin: 1px 0;
+}
+.conteudo .interface{
+    color: #FF7100;
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid #FF2500;
+    margin-top: 1px;
+    transition: 1.2s;
+
+}
+ /*Inicio Div Promoções  */
+
+ .promocoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribui os itens com espaço igual */
+    gap: 20px; /* Espaçamento entre os itens */
+    height: auto;
+    margin-top: 70px;
+    padding:  4px 4%;
+}
+
+
+.promo-item {
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.promo-item::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-image: var(--hover-image);
+}
+
+.promo-item:hover::before {
+    opacity: 1;
+}
+
+
+.promo-item img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+.promo-item:hover img {
+    opacity: 0;
+}
+
+
+.promo-item:hover::before {
+    opacity: 1;
+}
+
+.promo-item p {
+    margin: 10px 0;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.promo-item:hover p {
+    color: #ff6347;
+}
+
+.promo-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .promo-item {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-item {
+        flex-basis: 45%; /* 2 itens por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-item {
+        flex-basis: 100%; /* 1 item por linha */
+    }
+}
+
+/* Footer styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #022a5f;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-div {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.footer-div h3 {
+    margin-bottom: 10px;
+}
+
+.footer-div:hover {
+    transform: scale(1.05);
+    background-color: #091f81;
+}
+
+.footer-div.logo img {
+    height: auto;
+    width: 60%;
+    margin-top: 40px;
+}
+
+.footer-div ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-div ul li {
+    margin: 5px 0;
+}
+
+.footer-div ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-div ul li a:hover {
+    color: #ff6347;
+}
+
+.footer-div img {
+    width: 50px;
+    height: auto;
+    margin: 5px;
+    transition: transform 0.3s;
+}
+
+.footer-div img:hover {
+    transform: scale(1.1);
+}
+
+.conteudo {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Responsividade */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        margin-left: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .social-icons {
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icons a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        
+    }
+
+    .footer-div {
+        margin: 10px 0;
+    }
+
+    .footer-div.logo img {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+.brand {
+    text-align: center;
+    padding: 4px 0;
+    background-color: #f2f2f2;
+    margin-top: 50px;
+    
+}
+
+.brand h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.brand p {
+    max-width: 600px;
+    margin: 0 auto 10px;
+    color: #666;
+}
+
+.brand img {
+    max-width: 200px;
+    height: auto;
+    margin: 40px;
+    padding: 0;
+    
+}
